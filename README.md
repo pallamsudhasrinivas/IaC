@@ -60,26 +60,40 @@ There is one more category in which we can divide the tools is “how they work�
 Now let us understand when we should choose which IAC tool
 
     Configuration Management vs. Provisioning:
-    Ansible, Chef, Puppet, and salt stack are configuration management tools that can install and configure the applications on existing infrastructures. Whereas terraform and cloud formation are infrastructure provisioning tools, they can be used to provision the servers and other infrastructure like load balancers, databases, networking configuration. Ansible and Terraform are the tools that can perform both provisioning and Configuration management. Ansible and Terraform can work together. We can use Terraform for provisioning of infrastructure, databases, load balancer, network topology, etc. Ansible can be used to deploy applications on top of these infrastructures. 
-    Some tools can perform both tasks. For example, Terraform can do both infrastructure provisioning as well application deployment
-    Mutable Infrastructure Vs Immutable Infrastructure:  
-    Chef, Puppet, Ansible, and SaltStack are all mutable infrastructure tools by nature. If you configure these tools to install a new version of an existing package or software, it will install the software update on our existing servers and make the changes in real-time.
-    Whereas for a tool like Terraform (an immutable IAC tool), every “change” is a new server deployment.
+        Ansible, Chef, Puppet, and salt stack are configuration management tools that can install and configure the applications on existing infrastructures.
+        Whereas terraform and cloud formation are infrastructure provisioning tools, they can be used to provision the servers and other infrastructure like load
+        balancers, databases, networking configuration. Ansible and Terraform are the tools that can perform both provisioning and Configuration management.
+        Ansible and Terraform can work together. We can use Terraform for provisioning of infrastructure, databases, load balancer, network topology, etc. Ansible
+        can be used to deploy applications on top of these infrastructures. 
+       
+       Some tools can perform both tasks. For example, Terraform can do both infrastructure provisioning as well application deployment
+        Mutable Infrastructure Vs Immutable Infrastructure:  
+        Chef, Puppet, Ansible, and SaltStack are all mutable infrastructure tools by nature. If you configure these tools to install a new version of an existing
+        package or software, it will install the software update on our existing servers and make the changes in real-time.
+        Whereas for a tool like Terraform (an immutable IAC tool), every “change” is a new server deployment.
 
     Declarative Vs Imperative: 
-    Chef and Ansible follow the imperative approach as we must write code that specifies the step-by-step to achieve the target state. Terraform, CloudFormation, SaltStack, and Puppet all use a declarative method, in which we write code that defines the target state we want to achieve, and the IAC tool figures out how to get there
+        Chef and Ansible follow the imperative approach as we must write code that specifies the step-by-step to achieve the target state.
+        Terraform, CloudFormation, SaltStack, and Puppet all use a declarative method, in which we write code that defines the target state we want to achieve, 
+        and the IAC tool figures out how to get there
 
     Agent Vs Agentless:
-    Chef, Puppet, and SaltStack are agent-based tools that involve the installation of an agent on the target computer. This agent usually runs in the background on the target machine and carries out the operations necessary to achieve the goal.
-    On the other hand, No agents are needed for Ansible, CloudFormation, or Terraform. Some of them need agents, but these are usually included in the infrastructure we use.
+        Chef, Puppet, and SaltStack are agent-based tools that involve the installation of an agent on the target computer. This agent usually runs in the
+        background on the target machine and carries out the operations necessary to achieve the goal.
+        On the other hand, No agents are needed for Ansible, CloudFormation, or Terraform. Some of them need agents, but these are usually included in the
+        infrastructure we use.
 
     Conclusion:
-    Infrastructure as Code is thus practice and process of representing the underlying resources or infrastructure in the form of Code that can be versioned and stored in the source control system
+    Infrastructure as Code is thus practice and process of representing the underlying resources or infrastructure in the form of Code that can be versioned 
+    and stored in the source control system
+    
     The only tool that satisfies all our requirements is Terraform.
 
 
 Reference: 
 https://www.nexastack.com/blog/infrastructure-as-code
+
 https://shahadarsh.com/2020/07/12/principles-patterns-and-practices-for-effective-infrastructure-as-code/
+
 https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code
 
